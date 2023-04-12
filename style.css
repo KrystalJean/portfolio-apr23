@@ -1,0 +1,310 @@
+:root {
+    --blue-grad: linear-gradient(90deg, #40c4e4 0%, #468ce3 100%);
+    --border-grad: -webkit-linear-gradient(#468ce3, #40c4e4);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,h2, h3, h4,h5,h6 {
+    font-weight: 500;
+}
+
+.hide {
+    /* visibility: hidden; */
+    display: none;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+
+}
+
+.flex-around {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.flex-evenly{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-start {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.line {
+    height: 100%;
+    width: 1px;
+    background-color: #5861787a;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 16%;
+
+    background-color: #15142c;
+    color: #15142c;
+
+    font-size: 16px;
+    letter-spacing: .05em;
+
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+/* NAVBAR */
+
+nav {
+    width: 100%;
+    height: 14%;
+}
+
+.nav-list {
+    width: 60%;
+}
+
+.nav-link {
+    color: #96a1bd;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-item {
+    padding: 8px 0px;
+    margin-bottom: 2px;
+    font-size: .7em;
+    list-style: none;
+}
+
+nav i {
+    padding-left: 2px;
+    font-size: .8em;
+}
+
+.underline {
+    height: 1px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.underline-active {
+    height: 1px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.gradient {
+    background: rgb(64,196,228);
+    background: var(--blue-grad);
+}
+
+.gradient-active {
+    background: rgb(64,196,228);
+    background: var(--blue-grad);
+}
+
+.text-gradient {
+    background: -webkit-linear-gradient(#468ce3, #40c4e4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-active {
+    background: -webkit-linear-gradient(#468ce3, #40c4e4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* PAGES */
+
+.info-container {
+    /* min-width: 380px; */
+    width: 100%;
+    /* aspect-ratio: 2.5 / 1; */
+    height: auto;
+    overflow: scroll;
+
+    border-radius: 10px;
+    padding: 20px;
+
+    background: rgb(64,196,228);
+    background: var(--blue-grad);
+}
+
+h3 {
+    letter-spacing: .2em;
+    font-size: .8em;
+    color: #15142c;
+}
+
+h5 i {
+    font-size: .8em;
+    padding-right: 5px;
+}
+
+h5 {
+    font-size: .8em;
+    cursor: pointer;
+    height: auto;
+    width: 100%;
+    border-radius: 50px;
+    padding: 10px 16px;
+    margin-left: -16px;
+}
+
+h5:hover {
+    background-color: #86D3ED;
+}
+
+.page {
+    height: 200px;
+    width: 100%;
+}
+
+.columns {
+    height: 100%;
+    padding: 0 5%;
+    /* margin-bottom: 4%; */
+    width: 33%;
+}
+
+/* .col-1-container {
+    width: 33%;
+    
+}
+
+.col-2-container {
+    width: 33%;
+}
+
+.col-3-container {
+    width: 33%;
+} */
+
+img {
+    width: 100%;
+    aspect-ratio: 2/1;
+    border-radius: 8px;
+}
+
+.blog-title {
+    color: #86D3ED;
+    text-shadow: #295478 1px 1px 1px;
+    font-weight: bold;
+}
+
+.blog-author {
+    font-size: .7em;
+    font-weight: bold;
+}
+
+.blog-date {
+    font-size: .6em;
+    margin-bottom: 5%;
+}
+
+.blog-date a {
+    text-decoration: none;
+    color: #15142c;
+    cursor: pointer;
+}
+
+.blink {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px;
+    font-size: large;
+    opacity: 100%;
+    color: #d6f7ff;
+    text-shadow: #15142c 1px 1px;
+
+    animation: fade-out 1.5s infinite;
+
+  }
+  /* @keyframes fade-in {
+    to {
+      opacity: 100%;
+    }
+  } */
+  @keyframes fade-out {
+    to {
+      opacity: 40%;
+    }
+  }
+ 
+
+/* MEDIA SCREENS */
+
+
+@media (max-width:1075px) {
+
+    .info-container {
+        padding: 20px 12px;
+    }
+
+    .columns {
+        padding: 0 3%;
+    }
+}
+
+@media (max-width: 880px) {
+
+    .columns {
+        padding: 0 2%;
+    }
+}
+
+@media (max-width: 800px) {
+    .nav-list {
+        width: 70%;
+    }
+}
+
+@media (max-width: 730px) {
+    .nav-list {
+        width: 100%;
+        min-width: 285px;
+    }
+
+    nav i {
+        padding-right: 10px;
+        font-size: .6em;
+    }
+
+}
+
+
